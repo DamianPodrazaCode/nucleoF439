@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;001_GPIO_speedTest/nucleoF439 Debug.launch&apos; to &apos;001_GPIO_speedTest Debug.launch&apos;" description="Rename resource &apos;nucleoF439 Debug.launch&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="nucleoF439 Debug.launch" name="001_GPIO_speedTest Debug.launch" stamp="1678568200970" updateReferences="true"/>
+</session>
