@@ -63,6 +63,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:nucleoH745_CM7\ Debug/activeLau
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:test\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:test\ Debug/activeLaunchTarget=null\:---
 org.eclipse.launchbar.core.descriptorType.default\:002_FMC_LCD_8_16\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:003_FMC_LCD_8_16_DMA\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:New_configuration/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:New_configuration/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:nucleoH745/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

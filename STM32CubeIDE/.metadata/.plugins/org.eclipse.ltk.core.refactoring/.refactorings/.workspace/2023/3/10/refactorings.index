@@ -2,3 +2,5 @@
 1678568216668	Delete resource '001_GPIO_speedTest/001_GPIO_speedTest Debug.launch'
 1678653340252	Rename resource 'nucleoF439'
 1678653346721	Delete resource '002_FMC_LCD_8_16/nucleoF439 Debug.launch'
+1678655967945	Rename resource 'nucleoF439'
+1678655980588	Delete resource '003_FMC_LCD_8_16_DMA/nucleoF439 Debug.launch'

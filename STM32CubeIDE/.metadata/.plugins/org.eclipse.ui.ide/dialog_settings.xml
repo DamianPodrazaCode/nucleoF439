@@ -7,6 +7,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\__GitHub\STM32CubeIDE-templates\templates-workspace"/>
 			<item value="D:\__GitHub\STM32CubeIDE-GPIO-SpeedTest\nucleoF439"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">

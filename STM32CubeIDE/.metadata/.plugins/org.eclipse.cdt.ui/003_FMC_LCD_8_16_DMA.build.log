@@ -1,0 +1,17 @@
+22:31:06 **** Incremental Build of configuration Debug for project 003_FMC_LCD_8_16_DMA ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fmc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -ID:/050_STM32/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/STM32F4xx_HAL_Driver/Inc -ID:/050_STM32/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/050_STM32/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/050_STM32/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fmc.d" -MT"Core/Src/fmc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/fmc.o"
+arm-none-eabi-gcc -o "003_FMC_LCD_8_16_DMA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\__GitHub\nucleoF439\STM32CubeIDE\003_FMC_LCD_8_16_DMA\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="003_FMC_LCD_8_16_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 003_FMC_LCD_8_16_DMA.elf
+ 
+arm-none-eabi-size   003_FMC_LCD_8_16_DMA.elf 
+arm-none-eabi-objdump -h -S  003_FMC_LCD_8_16_DMA.elf  > "003_FMC_LCD_8_16_DMA.list"
+   text	   data	    bss	    dec	    hex	filename
+   9524	     60	   1756	  11340	   2c4c	003_FMC_LCD_8_16_DMA.elf
+Finished building: default.size.stdout
+ 
+Finished building: 003_FMC_LCD_8_16_DMA.list
+ 
+
+22:31:07 Build Finished. 0 errors, 0 warnings. (took 533ms)
+

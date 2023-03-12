@@ -349,3 +349,9 @@ C Model Exception: C Model Status [Element loop.c does not exist.]
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
 !SUBENTRY 1 org.eclipse.cdt.core 4 969 2023-03-12 21:42:18.573
 !MESSAGE Element loop.c does not exist.
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-12 22:19:09.156
+!MESSAGE Indexed 'nucleoF439' (23 sources, 83 headers) in 0.862 sec: 4,635 declarations; 19,554 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0083%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-12 22:19:28.950
+!MESSAGE Indexed '003_FMC_LCD_8_16_DMA' (23 sources, 83 headers) in 0.769 sec: 4,635 declarations; 19,554 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0083%)
