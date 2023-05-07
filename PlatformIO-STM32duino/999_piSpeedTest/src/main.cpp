@@ -125,12 +125,20 @@ Czas wykonania : 69 [ms]
 
 /*
 stm32 nucleo-F439ZIT
+168MHz
 Metoda Gauss–Legendre
 Czas wykonania : 52 [ms]
 Metoda Brouncker'a
 Czas wykonania : 252 [ms]
 Metoda Monte Carlo
 Czas wykonania : 53 [ms]
+180MHz
+Metoda Gauss–Legendre
+Czas wykonania : 48 [ms]
+Metoda Brouncker'a
+Czas wykonania : 236 [ms]
+Metoda Monte Carlo
+Czas wykonania : 49 [ms]
 */
 
 void loop()

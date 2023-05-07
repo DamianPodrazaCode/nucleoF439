@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-#define _clock168MHz
-//#define _clock180MHz
+//#define _clock168MHz
+#define _clock180MHz
 
 #ifdef __cplusplus
 extern "C" {
