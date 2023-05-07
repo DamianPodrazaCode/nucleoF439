@@ -123,6 +123,16 @@ Metoda Monte Carlo
 Czas wykonania : 69 [ms]
 */
 
+/*
+stm32 nucleo-F439ZIT
+Metoda Gauss–Legendre
+Czas wykonania : 52 [ms]
+Metoda Brouncker'a
+Czas wykonania : 252 [ms]
+Metoda Monte Carlo
+Czas wykonania : 53 [ms]
+*/
+
 void loop()
 {
   delay(10);
