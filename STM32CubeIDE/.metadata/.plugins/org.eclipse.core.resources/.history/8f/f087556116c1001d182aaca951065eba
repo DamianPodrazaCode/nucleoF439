@@ -1,9 +1,0 @@
-#include "loop.h"
-#include <stdbool.h>
-
-void setup() {
-}
-
-void loop() {
-}
-

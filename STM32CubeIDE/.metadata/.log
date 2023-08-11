@@ -355,3 +355,40 @@ C Model Exception: C Model Status [Element loop.c does not exist.]
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-03-12 22:19:28.950
 !MESSAGE Indexed '003_FMC_LCD_8_16_DMA' (23 sources, 83 headers) in 0.769 sec: 4,635 declarations; 19,554 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0083%)
+!SESSION 2023-08-11 21:36:53.393 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:\__GitHub\nucleoF439\STM32CubeIDE
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-08-11 21:37:05.157
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-08-11 21:37:05.157
+!MESSAGE Log4j2 initialized with config file D:\__GitHub\nucleoF439\STM32CubeIDE\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-08-11 21:37:13.825
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-08-11 22:00:55.046
+!MESSAGE Indexed '020_SDRAM_MT48LC16M16A2-75' (19 sources, 81 headers) in 2.16 sec: 4,624 declarations; 19,413 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0083%)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-11 22:28:54.823
+!MESSAGE Error in final launch sequence:
+
+Setup exceptions
+!STACK 1
+org.eclipse.core.runtime.CoreException: Setup exceptions
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-11 22:28:54.823
+!MESSAGE Setup exceptions
