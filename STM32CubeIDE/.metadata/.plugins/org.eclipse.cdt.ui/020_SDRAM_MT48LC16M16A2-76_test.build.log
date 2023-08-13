@@ -1,21 +1,10 @@
-20:14:11 **** Incremental Build of configuration Debug for project 020_SDRAM_MT48LC16M16A2-76_test ****
+20:22:02 **** Incremental Build of configuration Debug for project 020_SDRAM_MT48LC16M16A2-76_test ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:23:17: warning: variable 'tab' set but not used [-Wunused-but-set-variable]
-   23 |         uint8_t tab[0x100] = { 0 };
-      |                 ^~~
-arm-none-eabi-gcc -o "020_SDRAM_MT48LC16M16A2-76_test.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\__GitHub\nucleoF439\STM32CubeIDE\020_SDRAM_MT48LC16M16A2-76_test\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="020_SDRAM_MT48LC16M16A2-76_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 020_SDRAM_MT48LC16M16A2-76_test.elf
- 
 arm-none-eabi-size   020_SDRAM_MT48LC16M16A2-76_test.elf 
-arm-none-eabi-objdump -h -S  020_SDRAM_MT48LC16M16A2-76_test.elf  > "020_SDRAM_MT48LC16M16A2-76_test.list"
    text	   data	    bss	    dec	    hex	filename
-   7928	     20	   1628	   9576	   2568	020_SDRAM_MT48LC16M16A2-76_test.elf
+   7912	     20	   1620	   9552	   2550	020_SDRAM_MT48LC16M16A2-76_test.elf
 Finished building: default.size.stdout
  
-Finished building: 020_SDRAM_MT48LC16M16A2-76_test.list
- 
 
-20:14:12 Build Finished. 0 errors, 1 warnings. (took 564ms)
+20:22:02 Build Finished. 0 errors, 0 warnings. (took 141ms)
 
