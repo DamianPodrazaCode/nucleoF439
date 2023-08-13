@@ -41,34 +41,6 @@ int main(void) {
 
 	__NOP();
 
-	// czyszczenie całej pamięci SDRAM
-//	volatile uint32_t clearTimeSDRAM = HAL_GetTick();
-//	for (int i = 0; i < 0x2000000; i++)
-//		*(__IO uint8_t*) (SDRAM_BANK_ADDR + (1 * i)) = 0xa8;
-//	clearTimeSDRAM = HAL_GetTick() - clearTimeSDRAM;
-//	__NOP();
-//
-//	// uzupełnianie pamięci ram
-//	uint8_t tab[0x100] = { 0 };
-//	volatile uint32_t timeRAM = HAL_GetTick();
-//	for (int j = 0; j < 0x10000; j++)
-//		for (int i = 0; i < 0x100; i++) {
-//			tab[i] = i;
-//		}
-//	timeRAM = HAL_GetTick() - timeRAM;
-//	__NOP();
-//
-//	// uzupełnianie SDRAM
-//	volatile uint32_t timeSDRAM = HAL_GetTick();
-//	for (int j = 0; j < 0x10000; j++)
-//		for (int i = 0; i < 0x100; i++) {
-//			*(__IO uint8_t*) (SDRAM_BANK_ADDR + (1 * i)) = i; //bajt
-//			//	*(__IO uint16_t*) (SDRAM_BANK_ADDR + (2 * i)) = i; //pół słowo
-//			//	*(__IO uint32_t*) (SDRAM_BANK_ADDR + (4 * i)) = i; // słowo
-//		}
-//	timeSDRAM = HAL_GetTick() - timeSDRAM;
-//	__NOP();
-
 	while (1) {
 	}
 

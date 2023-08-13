@@ -263,3 +263,16 @@
 2023-08-13 18:18:49,084 [INFO] ThirdParty:978 - Integrity check success = true
 2023-08-13 18:18:49,084 [INFO] IntegrityCheckThread:100 - exiting critical section [integrity check]
 2023-08-13 18:18:49,084 [INFO] IntegrityCheckThread:103 - End integrity checks thread
+2023-08-13 22:00:28,841 [INFO] Activator:176 - 
+
+
+2023-08-13 22:00:28,842 [INFO] Activator:177 - !SESSION log4j initialized
+2023-08-13 22:00:33,602 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-08-13 22:00:39,674 [INFO] ApplicationProperties:184 - Using Application install path: C:\STM32\STM32CubeIDE\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.1.202307191849
+2023-08-13 22:00:39,685 [INFO] DbMcusXml:78 - Set database path to: C:\STM32\STM32CubeIDE\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.1.202307191849\\db\/mcu/
+2023-08-13 22:00:39,686 [INFO] ApiDb:274 - Set plugin database path to: C:\STM32\STM32CubeIDE\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.1.202307191849\\db\/plugins/boardmanager/
+2023-08-13 22:00:39,686 [WARN] ApiDb:259 - Overriding images path with different value:  => C:\STM32\STM32CubeIDE\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.1.202307191849\\db\/plugins/mcufinder/images/
+2023-08-13 22:00:39,696 [INFO] ApiDb:250 - Set database path to: C:\Users\ZoMbiE\.stmcufinder\plugins\mcufinder//mcu/
+2023-08-13 22:00:39,697 [INFO] DbMcusAds:125 - Set database path to: C:\Users\ZoMbiE\.stmcufinder\plugins\mcufinder//mcu/
+2023-08-13 22:00:39,698 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\ZoMbiE\.stmcufinder\plugins\mcufinder//mcu/cs/
+2023-08-13 22:00:39,785 [INFO] RulesReader:64 - Compatibility file has been processed (293 Rules)
