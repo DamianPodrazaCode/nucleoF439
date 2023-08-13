@@ -1,6 +1,9 @@
 #include "main.h"
-// adres start 0xC0000000 - adres stop 0xc1ffffff - 64Mb, 8MB, 4M half Word, 2M Word
-#define SDRAM_BANK_ADDR ((uint32_t)0xC0000000)
+#include "stdlib.h"
+// adres start 0xC0000000 - adres stop 0xc1ffffff - 256Mb, 32MB, 16M half Word, 8M Word
+#define SDRAM_BANK_ADDR_START 	((uint32_t)0xc0000000)
+#define SDRAM_BANK_ADDR_STOP  	((uint32_t)0xc1ffffff)
+#define SDRAM_BANK_COUNT		(0x20000)
 
 void SystemClock_Config(void);
 static void GPIO_Init(void);
@@ -12,33 +15,59 @@ int main(void) {
 	GPIO_Init();
 	MX_FMC_Init();
 
+	volatile uint32_t test_ok = 0; //zmienna w której będzie wynik testu
+	uint32_t test_err[0x100] = { 0 };
+
+	// uzupełnienie randomem małego bloku na stosie
+
+	uint8_t tab[0x100];
+	srand(HAL_GetTick());
+	for (int i = 0; i < 0x100; i++) {
+		tab[i] = i; // rand() % 0x100;
+	}
+
+	for (int j = 0; j < 10; j++)
+		for (int i = 0; i < 0x100; i++) {
+			*(__IO uint8_t*) (SDRAM_BANK_ADDR_START + (j * 0x100) + (1 * i)) = tab[i];
+		}
+
+	for (int j = 0; j < 10; j++)
+		for (int i = 0; i < 0x100; i++) {
+			if ((*(__IO uint8_t*) (SDRAM_BANK_ADDR_START + (j * 0x100) + (1 * i))) != tab[i]) {
+				test_err[test_ok] = (SDRAM_BANK_ADDR_START + (j * 0x100) + (1 * i));
+				test_ok++;
+			}
+		}
+
+	__NOP();
+
 	// czyszczenie całej pamięci SDRAM
-	volatile uint32_t clearTimeSDRAM = HAL_GetTick();
-	for (int i = 0; i < 0x2000000; i++)
-		*(__IO uint8_t*) (SDRAM_BANK_ADDR + (1 * i)) = 0xa8;
-	clearTimeSDRAM = HAL_GetTick() - clearTimeSDRAM;
-	__NOP();
-
-	// uzupełnianie pamięci ram
-	uint8_t tab[0x100] = { 0 };
-	volatile uint32_t timeRAM = HAL_GetTick();
-	for (int j = 0; j < 0x10000; j++)
-		for (int i = 0; i < 0x100; i++) {
-			tab[i] = i;
-		}
-	timeRAM = HAL_GetTick() - timeRAM;
-	__NOP();
-
-	// uzupełnianie SDRAM
-	volatile uint32_t timeSDRAM = HAL_GetTick();
-	for (int j = 0; j < 0x10000; j++)
-		for (int i = 0; i < 0x100; i++) {
-			*(__IO uint8_t*) (SDRAM_BANK_ADDR + (1 * i)) = i; //bajt
-			//	*(__IO uint16_t*) (SDRAM_BANK_ADDR + (2 * i)) = i; //pół słowo
-			//	*(__IO uint32_t*) (SDRAM_BANK_ADDR + (4 * i)) = i; // słowo
-		}
-	timeSDRAM = HAL_GetTick() - timeSDRAM;
-	__NOP();
+//	volatile uint32_t clearTimeSDRAM = HAL_GetTick();
+//	for (int i = 0; i < 0x2000000; i++)
+//		*(__IO uint8_t*) (SDRAM_BANK_ADDR + (1 * i)) = 0xa8;
+//	clearTimeSDRAM = HAL_GetTick() - clearTimeSDRAM;
+//	__NOP();
+//
+//	// uzupełnianie pamięci ram
+//	uint8_t tab[0x100] = { 0 };
+//	volatile uint32_t timeRAM = HAL_GetTick();
+//	for (int j = 0; j < 0x10000; j++)
+//		for (int i = 0; i < 0x100; i++) {
+//			tab[i] = i;
+//		}
+//	timeRAM = HAL_GetTick() - timeRAM;
+//	__NOP();
+//
+//	// uzupełnianie SDRAM
+//	volatile uint32_t timeSDRAM = HAL_GetTick();
+//	for (int j = 0; j < 0x10000; j++)
+//		for (int i = 0; i < 0x100; i++) {
+//			*(__IO uint8_t*) (SDRAM_BANK_ADDR + (1 * i)) = i; //bajt
+//			//	*(__IO uint16_t*) (SDRAM_BANK_ADDR + (2 * i)) = i; //pół słowo
+//			//	*(__IO uint32_t*) (SDRAM_BANK_ADDR + (4 * i)) = i; // słowo
+//		}
+//	timeSDRAM = HAL_GetTick() - timeSDRAM;
+//	__NOP();
 
 	while (1) {
 	}
