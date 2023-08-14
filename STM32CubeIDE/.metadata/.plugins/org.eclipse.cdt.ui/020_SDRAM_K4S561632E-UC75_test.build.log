@@ -1,21 +1,10 @@
-09:11:40 **** Incremental Build of configuration Debug for project 020_SDRAM_K4S561632E-UC75_test ****
+09:58:03 **** Incremental Build of configuration Debug for project 020_SDRAM_K4S561632E-UC75_test ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:26:25: warning: variable 'test_err' set but not used [-Wunused-but-set-variable]
-   26 |         struct Test_ERR test_err;
-      |                         ^~~~~~~~
-arm-none-eabi-gcc -o "020_SDRAM_K4S561632E-UC75_test.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\__GitHub\nucleoF439\STM32CubeIDE\020_SDRAM_K4S561632E-UC75_test\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="020_SDRAM_K4S561632E-UC75_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 020_SDRAM_K4S561632E-UC75_test.elf
- 
 arm-none-eabi-size   020_SDRAM_K4S561632E-UC75_test.elf 
-arm-none-eabi-objdump -h -S  020_SDRAM_K4S561632E-UC75_test.elf  > "020_SDRAM_K4S561632E-UC75_test.list"
    text	   data	    bss	    dec	    hex	filename
-  12624	    112	   1960	  14696	   3968	020_SDRAM_K4S561632E-UC75_test.elf
+  12608	    112	   1960	  14680	   3958	020_SDRAM_K4S561632E-UC75_test.elf
 Finished building: default.size.stdout
  
-Finished building: 020_SDRAM_K4S561632E-UC75_test.list
- 
 
-09:11:41 Build Finished. 0 errors, 1 warnings. (took 598ms)
+09:58:03 Build Finished. 0 errors, 0 warnings. (took 138ms)
 
