@@ -3939,3 +3939,118 @@ Finished building: default.size.stdout
  
 Finished building: 020_SDRAM_W9864G6IH-7_test.list
  
+16:29:09 **** Incremental Build of configuration Debug for project 020_SDRAM_W9864G6IH-7_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:25:25: warning: variable 'test_err' set but not used [-Wunused-but-set-variable]
+   25 |         struct Test_ERR test_err;
+      |                         ^~~~~~~~
+arm-none-eabi-gcc -o "020_SDRAM_W9864G6IH-7_test.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\__GitHub\nucleoF439\STM32CubeIDE\020_SDRAM_W9864G6IH-7_test\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="020_SDRAM_W9864G6IH-7_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 020_SDRAM_W9864G6IH-7_test.elf
+ 
+arm-none-eabi-size   020_SDRAM_W9864G6IH-7_test.elf 
+arm-none-eabi-objdump -h -S  020_SDRAM_W9864G6IH-7_test.elf  > "020_SDRAM_W9864G6IH-7_test.list"
+   text	   data	    bss	    dec	    hex	filename
+   7928	     20	   1620	   9568	   2560	020_SDRAM_W9864G6IH-7_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: 020_SDRAM_W9864G6IH-7_test.list
+ 
+16:29:20 **** Incremental Build of configuration Debug for project 020_SDRAM_W9864G6IH-7_test ****
+make -j12 all 
+arm-none-eabi-size   020_SDRAM_W9864G6IH-7_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7928	     20	   1620	   9568	   2560	020_SDRAM_W9864G6IH-7_test.elf
+Finished building: default.size.stdout
+ 
+16:32:39 **** Incremental Build of configuration Debug for project 020_SDRAM_W9864G6IH-7_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:25:25: warning: variable 'test_err' set but not used [-Wunused-but-set-variable]
+   25 |         struct Test_ERR test_err;
+      |                         ^~~~~~~~
+arm-none-eabi-gcc -o "020_SDRAM_W9864G6IH-7_test.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\__GitHub\nucleoF439\STM32CubeIDE\020_SDRAM_W9864G6IH-7_test\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="020_SDRAM_W9864G6IH-7_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 020_SDRAM_W9864G6IH-7_test.elf
+ 
+arm-none-eabi-size   020_SDRAM_W9864G6IH-7_test.elf 
+arm-none-eabi-objdump -h -S  020_SDRAM_W9864G6IH-7_test.elf  > "020_SDRAM_W9864G6IH-7_test.list"
+   text	   data	    bss	    dec	    hex	filename
+   7928	     20	   1620	   9568	   2560	020_SDRAM_W9864G6IH-7_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: 020_SDRAM_W9864G6IH-7_test.list
+ 
+16:34:11 **** Incremental Build of configuration Debug for project 020_SDRAM_W9864G6IH-7_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:25:25: warning: variable 'test_err' set but not used [-Wunused-but-set-variable]
+   25 |         struct Test_ERR test_err;
+      |                         ^~~~~~~~
+arm-none-eabi-gcc -o "020_SDRAM_W9864G6IH-7_test.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\__GitHub\nucleoF439\STM32CubeIDE\020_SDRAM_W9864G6IH-7_test\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="020_SDRAM_W9864G6IH-7_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 020_SDRAM_W9864G6IH-7_test.elf
+ 
+arm-none-eabi-size   020_SDRAM_W9864G6IH-7_test.elf 
+arm-none-eabi-objdump -h -S  020_SDRAM_W9864G6IH-7_test.elf  > "020_SDRAM_W9864G6IH-7_test.list"
+   text	   data	    bss	    dec	    hex	filename
+   7936	     20	   1620	   9576	   2568	020_SDRAM_W9864G6IH-7_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: 020_SDRAM_W9864G6IH-7_test.list
+ 
+16:34:51 **** Incremental Build of configuration Debug for project 020_SDRAM_W9864G6IH-7_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:25:25: warning: variable 'test_err' set but not used [-Wunused-but-set-variable]
+   25 |         struct Test_ERR test_err;
+      |                         ^~~~~~~~
+arm-none-eabi-gcc -o "020_SDRAM_W9864G6IH-7_test.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\__GitHub\nucleoF439\STM32CubeIDE\020_SDRAM_W9864G6IH-7_test\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="020_SDRAM_W9864G6IH-7_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 020_SDRAM_W9864G6IH-7_test.elf
+ 
+arm-none-eabi-size   020_SDRAM_W9864G6IH-7_test.elf 
+arm-none-eabi-objdump -h -S  020_SDRAM_W9864G6IH-7_test.elf  > "020_SDRAM_W9864G6IH-7_test.list"
+   text	   data	    bss	    dec	    hex	filename
+   7912	     20	   1620	   9552	   2550	020_SDRAM_W9864G6IH-7_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: 020_SDRAM_W9864G6IH-7_test.list
+ 
+16:35:31 **** Incremental Build of configuration Debug for project 020_SDRAM_W9864G6IH-7_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:25:25: warning: variable 'test_err' set but not used [-Wunused-but-set-variable]
+   25 |         struct Test_ERR test_err;
+      |                         ^~~~~~~~
+arm-none-eabi-gcc -o "020_SDRAM_W9864G6IH-7_test.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\__GitHub\nucleoF439\STM32CubeIDE\020_SDRAM_W9864G6IH-7_test\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="020_SDRAM_W9864G6IH-7_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 020_SDRAM_W9864G6IH-7_test.elf
+ 
+arm-none-eabi-size   020_SDRAM_W9864G6IH-7_test.elf 
+arm-none-eabi-objdump -h -S  020_SDRAM_W9864G6IH-7_test.elf  > "020_SDRAM_W9864G6IH-7_test.list"
+   text	   data	    bss	    dec	    hex	filename
+   7912	     20	   1620	   9552	   2550	020_SDRAM_W9864G6IH-7_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: 020_SDRAM_W9864G6IH-7_test.list
+ 
+16:37:05 **** Incremental Build of configuration Debug for project 020_SDRAM_W9864G6IH-7_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:25:25: warning: variable 'test_err' set but not used [-Wunused-but-set-variable]
+   25 |         struct Test_ERR test_err;
+      |                         ^~~~~~~~
+arm-none-eabi-gcc -o "020_SDRAM_W9864G6IH-7_test.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\__GitHub\nucleoF439\STM32CubeIDE\020_SDRAM_W9864G6IH-7_test\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="020_SDRAM_W9864G6IH-7_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 020_SDRAM_W9864G6IH-7_test.elf
+ 
+arm-none-eabi-size   020_SDRAM_W9864G6IH-7_test.elf 
+arm-none-eabi-objdump -h -S  020_SDRAM_W9864G6IH-7_test.elf  > "020_SDRAM_W9864G6IH-7_test.list"
+   text	   data	    bss	    dec	    hex	filename
+   7912	     20	   1620	   9552	   2550	020_SDRAM_W9864G6IH-7_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: 020_SDRAM_W9864G6IH-7_test.list
+ 

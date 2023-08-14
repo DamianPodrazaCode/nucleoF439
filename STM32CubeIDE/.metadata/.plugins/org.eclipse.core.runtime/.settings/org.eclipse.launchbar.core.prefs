@@ -44,6 +44,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:020_SDRAM_K4S281632I-UC75_test2
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:020_SDRAM_K4S561632E-UC75_test\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:020_SDRAM_MT48LC16M16A2-75\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:020_SDRAM_MT48LC16M16A2-76_test\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:020_SDRAM_W9864G6IH-7_test\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:02_SPI_HAL_Tx_IT\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:03_SPI_HAL_Tx_DMA\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:03_SPI_HAL_Tx_DMA\ Debug/activeLaunchTarget=null\:---

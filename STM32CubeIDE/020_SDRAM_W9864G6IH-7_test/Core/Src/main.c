@@ -1,9 +1,9 @@
 #include "main.h"
 #include "stdlib.h"
-// adres start 0xC0000000 - adres stop 0xc0ffffff - 128Mb, 16MB, 8M half Word, 4M Word
+// adres start 0xC0000000 - adres stop 0xc0ffffff - 64Mb, 8MB, 4M half Word, 2M Word
 #define SDRAM_BANK_ADDR_START 	((uint32_t)0xc0000000)
-#define SDRAM_BANK_ADDR_STOP  	((uint32_t)0xc0ffffff)
-#define SDRAM_BANK_COUNT		(0x10000)
+#define SDRAM_BANK_ADDR_STOP  	((uint32_t)0xc07fffff)
+#define SDRAM_BANK_COUNT		(0x1000)
 
 void SystemClock_Config(void);
 static void GPIO_Init(void);
@@ -27,9 +27,8 @@ int main(void) {
 	// uzupełnienie randomem małego bloku na stosie
 
 	uint8_t tab[0x100];
-	//srand(HAL_GetTick());
 	for (int i = 0; i < 0x100; i++) {
-		tab[i] = i;//rand() % 0x100;
+		tab[i] = i;
 	}
 
 	for (int j = 0; j < SDRAM_BANK_COUNT; j++)
@@ -39,9 +38,10 @@ int main(void) {
 
 	for (int j = 0; j < SDRAM_BANK_COUNT; j++)
 		for (int i = 0; i < 0x100; i++) {
-			if ((*(__IO uint8_t*) (SDRAM_BANK_ADDR_START + (j * 0x100) + (1 * i))) != tab[i]) {
+			uint8_t temp = *(__IO uint8_t*) (SDRAM_BANK_ADDR_START + (j * 0x100) + (1 * i));
+			if ( temp != tab[i]) {
 				test_err.addr_err[test_ok] = (SDRAM_BANK_ADDR_START + (j * 0x100) + (1 * i));
-				test_err.sdram_err[test_ok] = *(__IO uint8_t*) (SDRAM_BANK_ADDR_START + (j * 0x100) + (1 * i));
+				test_err.sdram_err[test_ok] = temp;
 				test_err.ram_err[test_ok] = tab[i];
 				test_ok++;
 			}
@@ -81,7 +81,7 @@ SDRAM_HandleTypeDef hsdram1;
 static void MX_FMC_Init(void) {
 	hsdram1.Instance = FMC_SDRAM_DEVICE;
 	hsdram1.Init.SDBank = FMC_SDRAM_BANK1;
-	hsdram1.Init.ColumnBitsNumber = FMC_SDRAM_COLUMN_BITS_NUM_9;
+	hsdram1.Init.ColumnBitsNumber = FMC_SDRAM_COLUMN_BITS_NUM_8;
 	hsdram1.Init.RowBitsNumber = FMC_SDRAM_ROW_BITS_NUM_12;
 	hsdram1.Init.MemoryDataWidth = FMC_SDRAM_MEM_BUS_WIDTH_16;
 	hsdram1.Init.InternalBankNumber = FMC_SDRAM_INTERN_BANKS_NUM_4;
@@ -93,10 +93,10 @@ static void MX_FMC_Init(void) {
 	// sdram clk = 90MHz = 11,11ns
 	FMC_SDRAM_TimingTypeDef SdramTiming = { 0 };
 	SdramTiming.LoadToActiveDelay = 2; // tMRD = ?
-	SdramTiming.ExitSelfRefreshDelay = 6; // tXSR = ?
+	SdramTiming.ExitSelfRefreshDelay = 7; // tXSR = 75ns
 	SdramTiming.SelfRefreshTime = 5; //5 tRAS = 45ns
 	SdramTiming.RowCycleDelay = 6; //6 tRC = 65ns
-	SdramTiming.WriteRecoveryTime = 2; //2 tWR = tRDL = 2CLK
+	SdramTiming.WriteRecoveryTime = 2; //2 tWR = 2CLK
 	SdramTiming.RPDelay = 2; //2 tRP = 20ns
 	SdramTiming.RCDDelay = 2; //2 tRCD = 20ns
 	HAL_SDRAM_Init(&hsdram1, &SdramTiming);
