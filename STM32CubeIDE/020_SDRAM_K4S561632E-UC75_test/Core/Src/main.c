@@ -89,13 +89,13 @@ static void MX_FMC_Init(void) {
 	hsdram1.Init.WriteProtection = FMC_SDRAM_WRITE_PROTECTION_DISABLE;
 	hsdram1.Init.SDClockPeriod = FMC_SDRAM_CLOCK_PERIOD_2;
 	hsdram1.Init.ReadBurst = FMC_SDRAM_RBURST_DISABLE;
-	hsdram1.Init.ReadPipeDelay = FMC_SDRAM_RPIPE_DELAY_1;
+	hsdram1.Init.ReadPipeDelay = FMC_SDRAM_RPIPE_DELAY_0;
 	// sdram clk = 90MHz = 11,11ns
 	FMC_SDRAM_TimingTypeDef SdramTiming = { 0 };
 	SdramTiming.LoadToActiveDelay = 2;
 	SdramTiming.ExitSelfRefreshDelay = 7;
-	SdramTiming.SelfRefreshTime = 4;
-	SdramTiming.RowCycleDelay = 6;
+	SdramTiming.SelfRefreshTime = 3;
+	SdramTiming.RowCycleDelay = 3;
 	SdramTiming.WriteRecoveryTime = 2;
 	SdramTiming.RPDelay = 2;
 	SdramTiming.RCDDelay = 2;
@@ -127,7 +127,7 @@ static void MX_FMC_Init(void) {
 	HAL_SDRAM_SendCommand(&hsdram1, &cmd, 0xFFFF);
 	cmd.CommandMode = FMC_SDRAM_CMD_AUTOREFRESH_MODE;
 	cmd.CommandTarget = FMC_SDRAM_CMD_TARGET_BANK1;
-	cmd.AutoRefreshNumber = 8;
+	cmd.AutoRefreshNumber = 4;
 	cmd.ModeRegisterDefinition = 0;
 	HAL_SDRAM_SendCommand(&hsdram1, &cmd, 0xFFFF);
 	cmd.CommandMode = FMC_SDRAM_CMD_LOAD_MODE;
@@ -136,7 +136,7 @@ static void MX_FMC_Init(void) {
 	cmd.ModeRegisterDefinition =
 	SDRAM_MODEREG_BURST_LENGTH_2 |
 	SDRAM_MODEREG_BURST_TYPE_SEQUENTIAL |
-	SDRAM_MODEREG_CAS_LATENCY_2 |
+	SDRAM_MODEREG_CAS_LATENCY_3 |
 	SDRAM_MODEREG_OPERATING_MODE_STANDARD |
 	SDRAM_MODEREG_WRITEBURST_MODE_SINGLE;
 	HAL_SDRAM_SendCommand(&hsdram1, &cmd, 0xFFFF);
