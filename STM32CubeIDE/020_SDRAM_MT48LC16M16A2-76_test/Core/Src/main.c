@@ -9,6 +9,12 @@ void SystemClock_Config(void);
 static void GPIO_Init(void);
 static void MX_FMC_Init(void);
 
+struct Test_ERR{
+	uint32_t addr_err[0x100];
+	uint8_t ram_err[0x100];
+	uint8_t sdram_err[0x100];
+};
+
 int main(void) {
 	HAL_Init();
 	SystemClock_Config();
@@ -16,7 +22,7 @@ int main(void) {
 	MX_FMC_Init();
 
 	volatile uint32_t test_ok = 0; //zmienna w której będzie wynik testu
-	uint32_t test_err[0x100] = { 0 };
+	struct Test_ERR test_err;
 
 	// uzupełnienie randomem małego bloku na stosie
 
@@ -26,15 +32,17 @@ int main(void) {
 		tab[i] = i; // rand() % 0x100;
 	}
 
-	for (int j = 0; j < 10; j++)
+	for (int j = 0; j < SDRAM_BANK_COUNT; j++)
 		for (int i = 0; i < 0x100; i++) {
 			*(__IO uint8_t*) (SDRAM_BANK_ADDR_START + (j * 0x100) + (1 * i)) = tab[i];
 		}
 
-	for (int j = 0; j < 10; j++)
+	for (int j = 0; j < SDRAM_BANK_COUNT; j++)
 		for (int i = 0; i < 0x100; i++) {
 			if ((*(__IO uint8_t*) (SDRAM_BANK_ADDR_START + (j * 0x100) + (1 * i))) != tab[i]) {
-				test_err[test_ok] = (SDRAM_BANK_ADDR_START + (j * 0x100) + (1 * i));
+				test_err.addr_err[test_ok] = (SDRAM_BANK_ADDR_START + (j * 0x100) + (1 * i));
+				test_err.sdram_err[test_ok] = *(__IO uint8_t*) (SDRAM_BANK_ADDR_START + (j * 0x100) + (1 * i));
+				test_err.ram_err[test_ok] = tab[i];
 				test_ok++;
 			}
 		}
@@ -80,8 +88,9 @@ static void MX_FMC_Init(void) {
 	hsdram1.Init.CASLatency = FMC_SDRAM_CAS_LATENCY_2;
 	hsdram1.Init.WriteProtection = FMC_SDRAM_WRITE_PROTECTION_DISABLE;
 	hsdram1.Init.SDClockPeriod = FMC_SDRAM_CLOCK_PERIOD_2;
-	hsdram1.Init.ReadBurst = FMC_SDRAM_RBURST_ENABLE;
-	hsdram1.Init.ReadPipeDelay = FMC_SDRAM_RPIPE_DELAY_0;
+	hsdram1.Init.ReadBurst = FMC_SDRAM_RBURST_DISABLE;
+	hsdram1.Init.ReadPipeDelay = FMC_SDRAM_RPIPE_DELAY_1;
+	// sdram clk = 90MHz = 11,11ns
 	FMC_SDRAM_TimingTypeDef SdramTiming = { 0 };
 	SdramTiming.LoadToActiveDelay = 2;
 	SdramTiming.ExitSelfRefreshDelay = 7;
@@ -125,7 +134,7 @@ static void MX_FMC_Init(void) {
 	cmd.CommandTarget = FMC_SDRAM_CMD_TARGET_BANK1;
 	cmd.AutoRefreshNumber = 1;
 	cmd.ModeRegisterDefinition =
-	SDRAM_MODEREG_BURST_LENGTH_1 |
+	SDRAM_MODEREG_BURST_LENGTH_2 |
 	SDRAM_MODEREG_BURST_TYPE_SEQUENTIAL |
 	SDRAM_MODEREG_CAS_LATENCY_2 |
 	SDRAM_MODEREG_OPERATING_MODE_STANDARD |

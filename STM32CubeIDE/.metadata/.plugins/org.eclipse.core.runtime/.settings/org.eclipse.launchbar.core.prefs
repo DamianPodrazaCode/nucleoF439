@@ -2,7 +2,7 @@ LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
 activeLaunchTarget=null\:---
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_GPIO_speedTest,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:020_SDRAM_MT48LC16M16A2-75 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:020_SDRAM_MT48LC16M16A2-76_test Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_GPIO_speedTest
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:000_Szablon\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:000_Szablon\ Debug/activeLaunchTarget=null\:---

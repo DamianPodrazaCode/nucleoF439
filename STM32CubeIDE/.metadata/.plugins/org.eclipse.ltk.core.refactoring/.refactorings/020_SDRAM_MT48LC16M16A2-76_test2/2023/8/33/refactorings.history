@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;020_SDRAM_MT48LC16M16A2-76_test2/020_SDRAM_MT48LC16M16A2-75.ioc&apos; to &apos;020_SDRAM_MT48LC16M16A2-75_test2.ioc&apos;" description="Rename resource &apos;020_SDRAM_MT48LC16M16A2-75.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="020_SDRAM_MT48LC16M16A2-75.ioc" name="020_SDRAM_MT48LC16M16A2-75_test2.ioc" stamp="1691991582786" updateReferences="true"/>
+</session>
