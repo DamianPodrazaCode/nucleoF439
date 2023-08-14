@@ -1,3 +1,0 @@
-../Core/Src/stm32f4xx_hal_msp.c:3:6:HAL_MspInit	16	static
-../Core/Src/stm32f4xx_hal_msp.c:8:13:HAL_FMC_MspInit	4	static
-../Core/Src/stm32f4xx_hal_msp.c:11:6:HAL_SDRAM_MspInit	16	static

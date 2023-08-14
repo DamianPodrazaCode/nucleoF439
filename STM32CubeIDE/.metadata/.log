@@ -1841,3 +1841,18 @@ org.eclipse.core.runtime.CoreException: Setup exceptions
 
 !ENTRY org.eclipse.cdt.dsf 4 10005 2023-08-14 16:29:20.867
 !MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@70859be): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+!SESSION 2023-08-14 22:47:32.030 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-08-14 22:47:44.572
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-08-14 22:47:44.572
+!MESSAGE Log4j2 initialized with config file D:\__GitHub\nucleoF439\STM32CubeIDE\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-08-14 22:47:53.162
+!MESSAGE Started RMI Server, listening on port 41337
