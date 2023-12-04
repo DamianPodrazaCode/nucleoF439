@@ -6,7 +6,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
+//test
 #if defined(_clock168MHz) 
     // zegar na 168MHz dla USB 48MHz
     void SystemClock_Config(void) {
